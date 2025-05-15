@@ -12,14 +12,19 @@ public class Main {
         System.out.print("빈 열을 입력하세요(없으면 0): ");
         int X = sc.nextInt();
 
-        String[][] seat;
-        seat = new String[row][col];
+        int[][] seat;
+        seat = new int[colCount][rowCount];
 
-        for (int i = 0; i <= col; i++) {
-            for (row = 0; row == 0; row++) {
+        for (int emptyCol= 0; emptyCol <= colCount; emptyCol++) {
+            int R = 0;
+            seat[R][X] = 0;
+            R++;
+        }
+        for (int i = 0; i <= colCount; i++) {
+            int j = 0;
+            for (j = 0; j <= rowCount; j++) {
+                System.out.println(seat[i][j]);
             }
         }
-
-
     }
 }

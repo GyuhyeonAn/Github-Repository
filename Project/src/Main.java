@@ -15,16 +15,39 @@ public class Main {
         int[][] seat;
         seat = new int[colCount][rowCount];
 
-        for (int emptyCol= 0; emptyCol <= colCount; emptyCol++) {
-            int R = 0;
-            seat[R][X] = 0;
-            R++;
+        for (int i = 0; i <= X; i++) {
+            if (X != 0) {
+                seat[i][X] = 0;
+                i++;
+            } else break;
         }
-        for (int i = 0; i <= colCount; i++) {
-            int j = 0;
-            for (j = 0; j <= rowCount; j++) {
-                System.out.println(seat[i][j]);
+
+        for (col = 0; col <= colCount; col++) {
+            for (row = 0; row <= rowCount; row++) {
+                if (row != X && col <= colCount) {
+                    seat[col][row] = seatNum++;
+                    row++;
+                    seatNum++;
+                }
+                else {
+                    col++;
+                    row = 0;
+                    seatNum = 0;
+                }
+                for (int i = 0; i <= colCount; i++) {
+                    int j = 0;
+                    if (j <= rowCount) {
+                        System.out.print((i+1) + "열 " + seat[i][j] + "번 자리 | ");
+                        j++;
+                    }
+                    else {
+                        System.out.println("");
+                        j = 0;
+                        i++;
+                    }
+                }
             }
         }
     }
 }
+

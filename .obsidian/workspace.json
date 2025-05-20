@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "readme"
             }
+          },
+          {
+            "id": "50e15a10a15f3a2c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,7 +181,7 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "4406fb043e57b253",
+  "active": "50e15a10a15f3a2c",
   "lastOpenFiles": [
     "readme.pdf"
   ]

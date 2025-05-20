@@ -25,12 +25,15 @@
             "id": "50e15a10a15f3a2c",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.10"
+                "file": "readme.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
+              "icon": "lucide-file",
+              "title": "readme"
             }
           }
         ],
@@ -183,6 +186,9 @@
   },
   "active": "50e15a10a15f3a2c",
   "lastOpenFiles": [
-    "readme.pdf"
+    "image.png",
+    "readme.pdf",
+    "readme.md",
+    "스크린샷 2025-05-20 22.28.06.png"
   ]
 }

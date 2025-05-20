@@ -24,6 +24,7 @@ public class Main {
                 }
             }
         }
+        System.out.println("----------현재 좌석-----------");
         for (int col = 0; col < colMax; col++) {
             for (int row = 0; row < rowMax; row++) {
                 System.out.print(seat[col][row]);

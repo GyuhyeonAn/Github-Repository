@@ -24,14 +24,37 @@ public class Main {
                 }
             }
         }
-        System.out.println("----------현재 좌석-----------");
+        String[][] seatCopy = new String[colMax][rowMax];
         for (int col = 0; col < colMax; col++) {
             for (int row = 0; row < rowMax; row++) {
-                System.out.print(seat[col][row]);
+             seatCopy[col][row] = seat[col][row];
             }
-            System.out.println();
         }
-        //좌석 구성 및 출력 끝
 
+        System.out.println("----------현재 좌석-----------");
+        while (true) {
+            for (int col = 0; col < colMax; col++) {
+                for (int row = 0; row < rowMax; row++) {
+                    System.out.print(seat[col][row]);
+                }
+            System.out.println();
+            } //좌석 구성 및 출력 끝
+
+            System.out.print("좌석 혹은 이름을 입력하세요(종료하려면 exit 입력): ");
+            String input = sc.nextLine();
+
+            if (input.equals("exit")) {
+                break;
+            }
+
+
+
+
+
+
+
+        }
+        System.out.println("프로그램이 종료되었습니다.");
+        sc.close();
     }
 }

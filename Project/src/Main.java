@@ -18,8 +18,7 @@ public class Main {
             for (int row = 0; row < rowMax; row++) {
                 if (row == emptyLine) {
                     seat[col][row] = "    ";
-                }
-                else {
+                } else {
                     seat[col][row] = String.format("|%3d |", seatNum++);
                 }
             }
@@ -27,7 +26,7 @@ public class Main {
         String[][] seatCopy = new String[colMax][rowMax];
         for (int col = 0; col < colMax; col++) {
             for (int row = 0; row < rowMax; row++) {
-             seatCopy[col][row] = seat[col][row];
+                seatCopy[col][row] = seat[col][row];
             }
         }
 
@@ -37,7 +36,7 @@ public class Main {
                 for (int row = 0; row < rowMax; row++) {
                     System.out.print(seat[col][row]);
                 }
-            System.out.println();
+                System.out.println();
             } //좌석 구성 및 출력 끝
 
             System.out.print("좌석 혹은 이름을 입력하세요(종료하려면 exit 입력): ");
@@ -46,15 +45,12 @@ public class Main {
             if (input.equals("exit")) {
                 break;
             }
-
-
-
-
-
-
-
+            if (input.equals()) {
+            } else if
         }
         System.out.println("프로그램이 종료되었습니다.");
         sc.close();
     }
 }
+
+class arraySet() {}

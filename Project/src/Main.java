@@ -30,8 +30,9 @@ public class Main {
             }
         }
 
-        System.out.println("----------현재 좌석-----------");
+
         while (true) {
+            System.out.println("----------현재 좌석-----------");
             for (int col = 0; col < colMax; col++) {
                 for (int row = 0; row < rowMax; row++) {
                     System.out.print(seat[col][row]);
@@ -45,12 +46,21 @@ public class Main {
             if (input.equals("exit")) {
                 break;
             }
-            if (input.equals()) {
-            } else if
+
+            for(int col = 0; col < colMax; col++) {
+                for(int row = 0; row < rowMax; row++) {
+                    if(seat[col][row].equals(input)) { //일치하는 번호 찾기
+                        System.out.print("이름을 입력해주세요: ");
+                        String name = sc.nextLine();
+                        seat[col][row] = name;
+                    } else if () { //번호가 없을 때 일치하는 이름 찾기
+                        seat[col][row] = String.format("|%3s |", seatCopy[col][row]);
+                    } else {System.out.println("잘못된 값을 입력하셨습니다.");} // 이름도 없을 때
+                }
+            }
+
         }
         System.out.println("프로그램이 종료되었습니다.");
         sc.close();
     }
 }
-
-class arraySet() {}

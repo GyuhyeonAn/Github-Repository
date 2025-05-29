@@ -49,11 +49,11 @@ public class Main {
 
             for(int col = 0; col < colMax; col++) {
                 for(int row = 0; row < rowMax; row++) {
-                    if(seat[col][row].equals(input)) { //일치하는 번호 찾기
+                    if(String.isDigit(input) == 1) { //일치하는 번호 찾기
                         System.out.print("이름을 입력해주세요: ");
                         String name = sc.nextLine();
                         seat[col][row] = name;
-                    } else if () { //번호가 없을 때 일치하는 이름 찾기
+                    } else if ( ) { //번호가 없을 때 일치하는 이름 찾기
                         seat[col][row] = String.format("|%3s |", seatCopy[col][row]);
                     } else {System.out.println("잘못된 값을 입력하셨습니다.");} // 이름도 없을 때
                 }

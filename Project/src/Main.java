@@ -38,8 +38,8 @@ public class Main {
                     System.out.print(seat[col][row]);
                 }
                 System.out.println();
-            } //좌석 구성 및 출력 끝
-
+            }//좌석 구성 및 출력 끝
+            sc.nextLine();
             System.out.print("좌석 혹은 이름을 입력하세요(종료하려면 exit 입력): ");
             String input = sc.nextLine();
 
@@ -50,19 +50,20 @@ public class Main {
             boolean seatFind = false;
             for(int col = 0; col < colMax && !seatFind; col++) {
                 for(int row = 0; row < rowMax && !seatFind; row++) {
-                    if(input.matches("\\d+")) { //일치하는 번호 찾기
+                    if(seat[col][row].equals(input)) { //일치하는 번호 찾기
                         System.out.print("이름을 입력해주세요: ");
                         String name = sc.nextLine();
-                        seat[col][row] = name;
                         seat[col][row] = String.format("|%-3s|", name);
+                        seatFind = true;
                     } else if (seat[col][row].matches(".*[가-힣]")) { //번호가 없을 때 일치하는 이름 찾기
                         seat[col][row] = String.format("|%3d |", seatCopy[col][row]);
-                    } else {System.out.println("잘못된 값을 입력하셨습니다.");} // 이름도 없을 때
+                        seatFind = true;
+                    } // 이름도 없을 때
                 }
-                seatFind = true;
+
             }
 
-        }
+        }   
         System.out.println("프로그램이 종료되었습니다.");
         sc.close();
     }

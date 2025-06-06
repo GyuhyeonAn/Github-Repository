@@ -6,12 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        String temp;
         System.out.print("행을 입력해주세요: ");
-        int rowMax = sc.nextInt();
+        temp = sc.nextLine();
+        int rowMax = Integer.parseInt(temp);
         System.out.print("열을 입력해주세요: ");
-        int colMax = sc.nextInt();
+        temp = sc.nextLine();
+        int colMax = Integer.parseInt(temp);
         System.out.print("빈 열을 입력하세요(없으면 0): ");
-        int emptyLine = sc.nextInt();
+        temp = sc.nextLine();
+        int emptyLine = Integer.parseInt(temp);
         emptyLine -= 1;
 
         String[][] seat = new String[colMax][rowMax];
@@ -43,9 +47,8 @@ public class Main {
                 System.out.println();
             }//좌석 구성 및 출력 끝
             System.out.println();
-            sc.nextLine();
             System.out.print("좌석 혹은 이름을 입력하세요(종료하려면 exit 입력): ");
-            String input = sc.nextLine();
+            String input = sc.nextLine().strip();
 
 
             if (input.equals("exit")) {
@@ -54,18 +57,21 @@ public class Main {
             String findSeatNum = String.format("|%3s |", input);
             String findSeatName = String.format("|%3s|", input);
             boolean seatFind = false;
-            for(int col = 0; col < colMax && !seatFind; col++) {
-                for(int row = 0; row < rowMax && !seatFind; row++) {
+            outerloop:
+            for(int col = 0; col < colMax; col++) {
+                for(int row = 0; row < rowMax; row++) {
                     if(seat[col][row].equals(findSeatNum)) { //일치하는 번호 찾기
                         System.out.print("이름을 입력해주세요: ");
                         String name = sc.nextLine();
                         seat[col][row] = String.format("|%3s|", name);
                         seatFind = true;
+                        break outerloop;
                     }
                     else if (seat[col][row].equals(findSeatName)) { //번호가 없을 때 일치하는 이름 찾기
                         seat[col][row] = seatCopy[col][row];
                         System.out.println("고생하셨습니다.");
                         seatFind = true;
+                        break outerloop;
                     }
                 }
             }

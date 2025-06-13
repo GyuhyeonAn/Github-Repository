@@ -1,0 +1,2 @@
+피그마 링크 https://www.figma.com/board/UuwVOtEIxAwWonpVIQjpUa/Untitled?node-id=0-1&t=3Xo2WWuVocxNkbCN-1
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/UuwVOtEIxAwWonpVIQjpUa/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>

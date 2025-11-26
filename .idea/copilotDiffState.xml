@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/Library.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/Library.java" />
+              <option name="originalContent" value="import java.util.ArrayList;&#10;import java.util.List;&#10;&#10;public class Library {&#10;    public static void addBook(String title, String author, String genre) {&#10;        books.add(new Book(title, author, genre));&#10;    }&#10;&#10;    public static List&lt;Book&gt; searchBook(String query) {&#10;&#10;        System.out.println(&#10;                &quot;==== 도서 검색 ====\n&quot; +&#10;                &quot;검색 기준을 선택하세요:\n&quot; +&#10;                &quot;1. 제목\n&quot; +&#10;                &quot;2. 저자\n&quot; +&#10;                &quot;3. 분류(KDC)\n&quot; +&#10;                &quot;(현재 구현은 '제목' 기준으로만 검색합니다)\n&quot;&#10;        );&#10;&#10;        List&lt;Book&gt; searchResults = new ArrayList&lt;&gt;();&#10;        for (Book book : books) {&#10;            if (book.title.contains(query)) {&#10;                searchResults.add(book);&#10;            }&#10;        }&#10;        return searchResults;&#10;    }&#10;&#10;&#10;    public record Book(String title, String author, String KDC) {}&#10;    private static final List&lt;Book&gt; books = new ArrayList&lt;&gt;();&#10;}&#10;" />
+              <option name="updatedContent" value="import java.util.ArrayList;&#10;import java.util.List;&#10;&#10;public class Library {&#10;    public static void addBook(String title, String author, String genre) {&#10;        books.add(new Book(title, author, genre));&#10;    }&#10;&#10;    public static List&lt;Book&gt; searchBook(String query) {&#10;&#10;        System.out.println(&#10;                &quot;==== 도서 검색 ====\n&quot; +&#10;                &quot;검색 기준을 선택하세요:\n&quot; +&#10;                &quot;1. 제목\n&quot; +&#10;                &quot;2. 저자\n&quot; +&#10;                &quot;3. 분류(KDC)\n&quot; +&#10;                &quot;(현재 구현은 '제목' 기준으로만 검색합니다)\n&quot;&#10;        );&#10;&#10;        List&lt;Book&gt; searchResults = new ArrayList&lt;&gt;();&#10;        for (Book book : books) {&#10;            if (book.title.contains(query)) {&#10;                searchResults.add(book);&#10;            }&#10;        }&#10;        return searchResults;&#10;    }&#10;&#10;&#10;    public record Book(String title, String author, String KDC) {}&#10;    private static final List&lt;Book&gt; books = new ArrayList&lt;&gt;();&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

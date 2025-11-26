@@ -8,24 +8,32 @@ public class Main {
         Library.addBook("해리포터", "J.K. 롤링", "문학");
         Library.addBook("반지의 제왕", "J.R.R. 톨킨", "문학");
 
-        System.out.println(
-                "==== 도서 검색 ====\n" +
-                "검색 기준을 선택하세요:\n" +
-                "1. 제목\n" +
-                "2. 저자\n" +
-                "3. 분류(KDC)"
-        );
+        while (true) {
+            System.out.print(
+                    """
+                    \s
+                    ==== 도서관 ====
+                    1. 도서 검색
+                    2. 도서 대출
+                    3. 도서 반납
+                    0. 종료
+                    작업 번호를 입력하세요:\s"""
+            );
 
-        int searchStandard = sc.nextInt();
-
-        switch (searchStandard) {
-            case 1: System.out.println("검색할 도서 제목을 입력하세요:"); break;
-            case 2: System.out.println("검색할 저자명을 입력하세요:");    break;
-            case 3: System.out.println("검색할 분류(KDC)를 입력하세요:"); break;
+            int idx = sc.nextInt();
+            switch (idx) {
+                case 1:
+                    View.printBooks(Library.searchBook(sc));
+                    break;
+                case 2:
+                    Library.manageBook(sc, true);
+                    break;
+                case 3:
+                    Library.manageBook(sc, false);
+                    break;
+                case 0:
+                    System.exit(0);
+            }
         }
-
-        String searchTitle = sc.next();
-
-        view.printBooks(Library.searchBook(searchTitle, searchStandard));
     }
 }

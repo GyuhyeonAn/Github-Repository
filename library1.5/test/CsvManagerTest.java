@@ -1,11 +1,10 @@
 import org.junit.jupiter.api.Assertions;
 import java.util.*;
-import java.util.TreeMap;
+import org.junit.jupiter.api.Test;
 
 class CsvManagerTest {
 
-
-    @org.junit.jupiter.api.Test
+    @Test
     void testSaveLoud() {
         final String filename1 = "test1.csv";
         TreeMap<String, Book> Scv1 = new TreeMap<String, Book>();
@@ -30,7 +29,7 @@ class CsvManagerTest {
             Assertions.assertEquals(Scv2.get(key), value);
         }
     }
-    @org.junit.jupiter.api.Test
+    @Test
     void testLongSaveLoud() {
         final String filename1 = "test2.csv";
         TreeMap<String, Book> Scv1 = new TreeMap<String, Book>();

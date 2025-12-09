@@ -10,9 +10,8 @@ public class Book {
         this.author = author;
         this.category = category;
     }
-
     @Override
     public String toString() {
-        return "ISBN:" + isbn + " | 제목:" + title + " | 저자:" + author + " | 분야:" + category;
+        return  " ISBN:" + isbn + " | 제목:" + title + " | 저자:" + author + " | 분야:" + category;
     }
 }

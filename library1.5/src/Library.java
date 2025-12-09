@@ -12,8 +12,8 @@ public class Library {
         } else {
             System.out.println("--- 검색 결과 ---");
             for (int i = 0; i < list.size(); i++) {
-                Book b = list.get(i);
-                System.out.println(b.toString());
+                Book book = list.get(i);
+                System.out.println(book.toString());
             }
         }
     }
@@ -24,11 +24,11 @@ public class Library {
             return;
         }
 
-        System.out.println("--- 전체 도서 목록 (" + map.size() + "권) ---");
+        System.out.println("전체 도서 목록 (" + map.size() + "권)");
 
         for (String key : map.keySet()) {
-            Book b = map.get(key);
-            System.out.println(b.toString());
+            Book book = map.get(key);
+            System.out.println(book.toString());
         }
     }
 

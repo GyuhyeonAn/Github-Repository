@@ -11,7 +11,7 @@ public class CsvManager {
 
             for (String key : map.keySet()) {
                 Book book = map.get(key);
-                String line = book.isbn + "," + book.title + "," + book.author + "," + book.category + "," + book.isRental;
+                String line = book.isbn + "," + book.title + "," + book.author + "," + book.category;
 
                 bw.write(line);
                 bw.newLine();
@@ -39,12 +39,11 @@ public class CsvManager {
             while ((line = Breader.readLine()) != null) {
                 String[] data = line.split(",");
 
-                if (data.length == 5) {
+                if (data.length == 4) {
                     String isbn = data[0];
                     String title = data[1];
                     String author = data[2];
                     String category = data[3];
-                    boolean isRental = Boolean.parseBoolean(data[4]);
 
                 }
             }
